@@ -1,0 +1,32 @@
+INTRODUCTION TO Two-Way Data Binding
+---------------------------------------
+
+- Is a technique that allows the user to bind events of elements from view/template to component and vice-versa
+
+- The data flow is both ways i.e. from view to component and from component to view
+
+- Two-way data binding is a combination of Event binding and Property binding
+ 
+- Two way data binding is a combination of
+    -> Property Binding and Event Binding on the same element
+    E.g. 
+        <input [value]="data1" (input)="$event.target.value" />
+
+- Angular provides a built-in directive called "ngModel"
+    - using ngModel - it will handle both Property binding and Event binding
+
+- syntax: <input [(ngModel)]='variable_name' />
+    - syntax of ngModel is called the Banana syntax
+    - the name of the ngModel i.e. variable_name should be declared in the component class
+        - if you don't declare this variable it will give you error
+            - error -> property does not exist on AppComponent
+
+- There is one very very important error 
+    -----------------------------------------------------------------
+    "Can't bind to ngModel since it isn't a known property of input"
+    -----------------------------------------------------------------
+    - Why this error ?
+        - you have not imported FormsModule in AppModule
+    - How to fix it ?
+        - Import FormsModule in AppModule
+

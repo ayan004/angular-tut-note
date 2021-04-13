@@ -1,0 +1,84 @@
+BRIEF INTRODUCTION TO pipes
+----------------------------
+
+- Pipes are used to transform the data
+
+- Pipes will take data input and convert/transform into a desired format
+
+- Pipes are written using the pipe operator (|)
+
+- We can apply pipes to any view/template and to any data inputs
+
+- We can apply multiple pipes on a single element
+
+TYPES OF pipes
+
+- Built in Pipes    
+    - Lowercase
+    - Uppercase
+    - Currency
+    - Date
+
+- Parametrized Pipes
+    - We can pass one or more parameters to pipes
+
+- Chaining Pipes
+    - We can connect multiple pipes to a data input
+
+- Custom Pipes
+    - We can create our own custom pipes for various data formatting
+
+
+BRIEFING ON built-in-pipes
+----------------------------
+- these are the pipes that are readily available to us
+
+- Lowercase
+- Uppercase
+- Percent
+- Currency
+- Date
+- JSON
+
+- Syntax: 
+    <div> {{ <input_data> | <name_of_pipe> }} </div>
+
+- some use cases of the built-in-pipes
+    - lowercase
+        -> saving usernames/email_address
+    - uppercase
+        -> currency
+        -> airport codes
+    - date
+        -> by default mm,dd,yyyy
+    - json
+        -> Mr.Trainer specially uses this for debug purpose
+    - currency
+        -> by default uses dollar symbol $
+    - percent
+        -> by default is rounding to nearby integer
+        -> multiple by 100 and add % symbol
+
+BRIEFING ON Parametrized Pipes
+-------------------------------
+- Pipes can accept 1 or more parameters
+    -> conditions/filters/specific data based on which data will be transformed
+
+- Some of the built in pipes which accept parameters are:
+    - currency
+    - date  
+        'MM-dd-yyyy'
+        'short'
+        'long'
+    - percent
+        | percent : <minimumBeforeDecimal>.<minimumAfterDecimal>-<maximumAfterDecimal>
+
+- Syntax for writing parameter pipes:
+    {{ <data_input> | <pipe_name> : '<parameter>' }}
+
+BRIEFING ON Chaining Pipes
+----------------------------
+- Using multiple pipes on a data input is called as chaining pipes
+
+- Ex: {{ dob | date | uppercase }}
+

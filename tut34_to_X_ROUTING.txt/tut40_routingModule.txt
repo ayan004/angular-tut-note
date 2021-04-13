@@ -1,0 +1,40 @@
+INTRODUCTION TO Routing Module
+--------------------------------
+
+- Routing module is a placeholder for configuring all routes and navigations in one module
+
+- Each module can have its own routes
+
+- Best practice is to have all routes configured in one place
+    - Because its easy to maintain and debug
+
+- Duing the Angular app installation, we get an option
+    - Do you want to have routing in your application?
+        - It will automatically create the app routing module for us 
+
+- Before Angular 9 or Angular 10, we have to install this routing module manually
+
+- We can generate the APP ROUTING MODULE using the CLI
+    - ng generate module app-routing --flat --module=app 
+
+
+AFTER GENERATING THE 'app-routing.module.ts' MANUALLY WE NEED TO DO THE FOLLOWING STEPS:
+----------------------------------------------------------------------------------------
+- We need to import modules from the package
+    - import {Routes, RouterModule} from '@angular/router';
+
+- We need to configure route path array in the file
+    - const routes: Routes = [];
+
+- Then we need to define our module
+    - @NgModule({
+        imports: [RouterModule.forRoot(routes)],
+        exports: [RouterModule]
+    })
+
+- We need to export the module
+    - export class AppRoutingModule{}
+
+- Import the 'app-routing.module.ts' module in the 'app.module.ts'
+
+

@@ -1,0 +1,142 @@
+INTRODUCTION TO Angular Router <tut 34>
+-------------------------------
+
+- Routing is a mechanism used by Angular framework to manage the "paths" and routes of our Angular applications
+
+- Routing strategy helps in navigation between various views in our Angular application 
+
+- Angular framework comes with "Router" module which has everything we need to design, develop and implement routes and navigation links
+
+- Router is a singleton - which means there is ONLY one instance of the router in our Angular application
+
+- Angular Router is the official Router module which is written and maintained by core Angular team  
+
+- The router module is found in the package @angular/router
+
+- We need to setup Router array - every time a request is made, the router will search in the list of array and find the most relevant match
+
+- Router has states- which helps us get important information about the current state and data related to routes
+
+- All batteries included for router[don't know the meaning of this line]
+
+- We can handle various types of routes in Angular app
+    - Routes for components
+    - Getting Query Params from routes
+    - Getting the URL segments
+    - Loading child routes for a module
+    - Lazy Loading
+    - Handling wild card routes
+    - Handling default routes
+    - Handling 404 route
+
+- Examples:
+
+    Home -> http://myapplication.com/ -> Default module
+    Profile -> http://myapplication.com/profile -> Component Routing
+    Search -> http://myapplication.com/search?user=abc -> Query Params
+    Tasks -> http://myapplication.com/task/10/category/pending -> URL segment
+    Users -> http://myapplication.com/users -> module
+    view-user -> http://myaapplication.com/users/view/10 -> child routes
+    edit-user -> http://myapplication.com/users/edit/10 -> child routes
+    add-user -> http://myapplication.com/users/add -> child routes
+    manage-user -> http://myapplication.com/users/manage -> child routes
+    pageNotFound -> http://myapplication.com/pageNotFound -> 404 error -> No matching routes
+
+
+BRIEFING ON Component Routes  <tut 35>
+---------------------------------
+
+- Each component can have its own Routes
+
+- Various examples of component routes are:
+    - /products
+    - /products/view
+    - /products/add
+    - /users
+
+
+BRIEFING ON Router Outlet    <tut 36>
+----------------------------------------
+- Router outlet is a built-in-directive
+
+- Every Angular app should have "atleast" 1 router outlet   
+    - primary router outlet
+
+- By default - the router outlet is defined in app.component.html file
+
+- The Router inserts the component inside the <router-outlet> that gets matched based on the current browser's URL
+
+- You can have multiple router outlets in your application
+
+
+BRIEFING ON Multiple Router Outlet    <tut 37>
+--------------------------------------------------
+- The Router-outlet is a directive that's available from the router library where the Router inserts the component that gets matched based on the current browser's URL
+
+- You can add multiple outlets in your Angular application which enables you to implement avanced routing scenarios
+
+- By default - there is always a router-outlet and its treated as "primary"
+
+- We need to define named router outlets
+
+- When we don't provide any name for router-outlet it becomes primary
+
+- We can give any name we want - try to give meaningful names 
+
+- Example of declaring multiple router outlets
+{
+    path: 'add',
+    component: AddLoansComponent,
+    outlet: 'route1'
+}
+
+- http://localhost:4200/loans(route1:add)       ['loans' is also a path that is declared, same as the 'add' path, but it is not mentioned here]
+
+- http://localhost:4200/(route1:add)   [this URL is without 'loans']
+
+
+
+BRIEFING ON Routing Strategy    <tut 38>
+-------------------------------------------
+- Routing behaviour of the application URLs
+
+- Angular provides two routing strategies
+    - PathLocationStrategy
+        - Default routing strategy for Angular apps
+        - HTML 5 push state URL
+        - Examples
+            - http://myapp.com/dashboard
+            - http://myapp.com/user/10
+            - http://myapp.com/user/10/photos
+            - http://myapp.com/search?query=abc&state=ka&city=bengaluru
+    - HashLocationStrategy
+        - URL segments/patterns
+        - URL will have hash in the URLs
+        - Examples
+            - http://myapp.com/#/dashboard
+            - http://myapp.com/#/user/10
+            - http://myapp.com/#/user/10/photos
+            - http://myapp.com/#/search?query=abc&state=ka&city=bengaluru
+         - How to use HashLocationStrategy?
+            - We need to import HashLocationStrategy, LocationStrategy from @angular/common
+            - Add it to Providers array
+            - Angular will start loading our URLs using #
+
+- Why do we need two different types of routing?
+    Angular is a SPA(single page app)
+        - index.html
+    Cloud Vendors
+        - AWS 
+        - GCP
+        - Azure
+        - Hosting Provider(Bluehost, Siteground, DigitalOcean)
+    /#/loans/add -> route
+    - The route with '#' helps to understand that 'add' is not a different folder, its just a route
+
+-  Which one you should use when?
+    - Really there is no difference that will affect your application
+    - PathLocationStrategy is preferred because
+        - Clean URLs
+        - Simple
+        - Bookmarkable
+        - Easy to remember 

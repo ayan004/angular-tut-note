@@ -1,0 +1,7 @@
+INTRODUCTION TO interpolation
+
+- is a technique that allows the user to bind data from component to view(template)
+- the data flow is only one-way i.e. from component to view
+- can be used for integers, strings, objects, arrays and much more
+- syntax for defining interpolation is double curly braces
+- {{ variable_name }}

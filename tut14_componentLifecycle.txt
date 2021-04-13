@@ -1,0 +1,72 @@
+Angular Component Lifecycle Hooks::
+
+There are 8 Lifecycle Hooks
+
+    - ngOnChanges()
+    - ngOnInit()
+    - ngDoCheck()
+    - ngAfterContentInit()
+    - ngAfterContentChecked()
+    - ngAfterViewInit()
+    - ngAfterViewChecked()
+    - ngOnDestroy()
+
+
+-> ngOnChanges()
+    - Used in pretty much any component that has an input
+    - Called whenever an input value changes
+    - Is called the first time before ngOnInit
+
+-> ngOnInit()
+    - Used to initialize data in a component
+    - Called after input values are set when a component is initialized
+    - Added to every component by default by the AngularCLI
+    - Called only once
+
+-> ngDoCheck()
+    - Called during all change detection runs
+    - A run through the view by Angular to update/detect changes
+
+->  ngAfterContentInit()
+    - Called only once after first ngDoCheck() 
+    - Called after the first run through of initializing content
+
+-> ngAfterContentChecked()
+    - Called after every ngDoCheck()
+    - Waits till after ngAfterContentInit() on first run through
+
+-> ngAfterViewInit()
+    - Called after Angular initializes component and child component content
+    - Called only once after view is initialized
+
+-> ngAfterViewChecked()
+    - Called after all the content is initialized and checked (component and child components)
+    - First call is after ngAfterViewInit()
+    - Called after every ngAfterContentChecked() call is completed
+
+-> ngOnDestroy()
+    - Used to clean up any necessary code when a component is removed from the DOM
+    - Fairly often used to unsubscribe from things like services
+    - Called only once just before component is removed from the DOM
+
+
+
+Some of the most used ones are:
+- ngOnChanges()
+- ngOnInit()
+- ngAfterViewInit()
+- ngOnDestroy()
+
+Some more points on Lifecycle Hooks
+
+1. By default we have ngOnInit
+
+2. Whichever lifecycle hooks we want to use
+    a. import it ( e.g. OnInit )
+    b. implement the interface ( e.g. OnInit )
+    c. implement the method ( e.g. ngOnInit(): void {} )
+
+3. We can have any number of lifecycle hooks implemented
+
+4. 
+

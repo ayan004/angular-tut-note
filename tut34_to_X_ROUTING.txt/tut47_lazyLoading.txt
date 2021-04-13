@@ -1,0 +1,70 @@
+LAZY LOADING
+--------------
+
+- Any angular application is made up of multiple modules
+
+- Lets assume the modules of a 'Loan Managment System'
+    - Loans
+    - Customers
+    - Payments
+    - Invoices
+    - Reports
+    - Authentication
+    - Authorization
+    - Downloads
+    - Admin
+
+- Angular by default will load all modules at start
+
+- Loading all modules initially - weather required or not 
+    - makes your application performance slow
+    - also its a bad idea to expose modules which user is not going to use   
+
+- Lazy loading comes into picture
+    - Lazy loadig helps keep initial bundle sizes smaller, which in turn helps decrease load times
+    - Initially will load only modules which are mandatory
+    - Rest will be served as requested
+    - We have to route for each module
+    - Lets assume we are creating route to the 'Payments' module
+        /payments
+        - when URL will have the above path mentioned, then only we will load this module 
+    - it will boast app performance
+    - respond will be better
+    - we can verify if the user has access to this module
+    - Loading the modules on-demand (we can verify them in the console)
+
+- If you are coming from previous version of Angular 8
+    - the syntax has changed
+        - please use the expects function
+
+
+---------------------------------------------------------------------
+
+- There are two steps to create a lazy loading feature module
+    - Create Feature Module
+    - Configure loadChildren in appRouting
+
+- Feature module is a module specific to certain functionality
+
+- To load a feature module lazily (only on demand) we need to load its children using the loadChildren property in route configuraton
+
+- The modules generated using the Angular CLI - for lazy loading
+    -> there will be NO entry in AppModule
+    -> Hence, it will not be loaded initially
+
+- Syntax to create the lazy loading is given below
+    - ng g module <module_name> --route <module_route> --module app.module
+    - ng g module customers --route customers --module app.module
+
+- The above command will generate the following
+    - A routing file for the module
+    - A module file
+    - A component
+        - html
+        - css/scss
+        - spec
+        - class
+    - UPDATE the app routing module
+
+- /payments
+    -> 

@@ -1,0 +1,71 @@
+1. Angular is a modulaar based architecture
+
+    - There are lot of modules which are built-in
+    - Examples
+        - BrowserModule
+        - BrowserAnimationsModule
+
+    - Angular Material Library
+        - MatButtonModule
+        - MatDropDownModule
+
+2. All the code and functionality is grouped in a modules
+
+3. Whenever you see a @ symbol - it's a decorator
+
+4. What modules consist
+    - declarations
+        - this is where we will add all the components of the modules
+    - imports
+        - we can import modules inside a module
+    - providers
+        - services that we need will be injected here
+    - bootstrap
+        - what is the first component, the module should load
+    - exports
+        - is to export and expose the component outside of the module
+
+5. Every Angular application should have atleast 1 module
+
+6. By default, the Angular framework provides us with AppModule
+
+7. The AppModule will have a component by the name
+    - AppComponent
+
+8. Whenever we are building Angular applications
+    - we will always think of Modules first
+
+    E.g.
+        Contacts
+        Users
+        Leads
+        Opportunities
+        Settings
+        Profile
+        Authentication
+
+    Free User
+        Contacts
+        Users
+    Premium User
+        Contacts
+        Users
+        Leads
+        Opportunities
+    Enterprise User
+        Contacts
+        Users
+        Leads
+        Opportunities
+        Settings
+        Profile
+        Authentication
+
+9. Feature Modules  
+    - You can turn on or off the modules based on conditions
+
+10. Modules - Grouping
+    - components
+    - services
+    - pipes
+    - directives

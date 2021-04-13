@@ -1,0 +1,13 @@
+ROUTING - Wildcard Routes
+---------------------------
+
+- Wild card intercepts any invalid URLs in our application 
+
+- When no matching routes are found in the routes array, the router does not know where to go and hence results in console errors
+
+- Wild card routes are defined in the routes array using
+    - { path: '**' }
+
+- Usually a component named PageNotFound is mapped as best practice
+
+- This is to be the last route in the 'route' configuration

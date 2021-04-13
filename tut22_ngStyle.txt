@@ -1,0 +1,13 @@
+BRIEF INTRODUCTION TO ngStyle
+
+- its a built in directive that lets us set style/css properties
+- [ngStyle]
+- any/all CSS properties can be set using ngStyle
+- more than one property can be set to DOM element using ngStyle
+- We can pass dynamic values via variables to ngStyle
+- For e.g <div [ngStyle]="'background-color':value">Example 1</div>
+
+- in three ways you can declare [ngStyle]
+    - you can set static values with ngStyle
+    - pass dynamic value using variables 
+    - you can set condition inside [ngStyle]

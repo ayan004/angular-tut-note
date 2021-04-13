@@ -1,0 +1,36 @@
+ROUTING - ROUTE GUARDS
+----------------------------
+
+- Use route guards to prevent users from navigating to parts of an app without authorization
+
+- Route guards are used to secure the route paths
+
+- In most cases, the routes and screens are protected behind a good authenticaton system
+
+- We can generate any number of guards based on our application requirements 
+
+- The route guard resolves to true or false based on custom logic and functionality
+
+- E.g. 
+
+    user -> Route guard                         
+            -> Custom logic
+                -> True                         
+                    -> can access the route  
+
+                -> false
+                    -> custom logic on failure condition
+
+- To generate the route guard we can make use of Anguar CLI
+    - ng generate guard <guard_name>
+
+- Inject the guard in our module under providers
+
+- There are various types of route guards available, they are called interfaces
+    - canActivate: checks to see if a user can visit a route
+    - canActivateChild: checks to see if a user can visit a routes children
+    - canLoad: checks to see if a user can route to a module that lazy loaded
+    - canDeactivate: checks to see if a user can exit a route
+    - resolve: performs route data retrieval before route activation 
+
+- We can implement more than 1 guards in our application 

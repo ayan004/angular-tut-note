@@ -1,0 +1,24 @@
+Q. What is an Angular Directive?
+
+- Angular directives are used to extend the power of the HTML by giving it new syntax.
+- Directives can extend, change or modify behaviour of the DOM elements
+
+There are 3 types of Directives:
+
+- Component Directives  
+    - Every Angular application must have at least 1 Component
+    - Have its own templates
+    - Events attached
+
+- Stuctural Directives  
+    - Updates structure of the view
+    - ngFor, ngIf and ngSwitch
+
+- Attributes Directives
+    - ngStyle, ngClass
+
+How to generate directives
+    - ng generate component <component_name>  
+    [Here, in the video it is told that component is also a directive, right now I don't know how it is]
+    - ng generate directive <directive_name>
+

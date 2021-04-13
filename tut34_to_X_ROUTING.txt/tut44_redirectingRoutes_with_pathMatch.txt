@@ -1,0 +1,22 @@
+Redirecting Routes (with pathMatch)
+-------------------------------------
+
+- When we want a route to be redirected to another route - we will implement the redirectTo in our routes array
+
+- The syntax to define the same is given below 
+    - {path: ", redirectTo: 'home', pathMatch: 'full'}
+
+- The empty path indicates that it's the default root of the application
+
+- The empty path also requires us to mention that pathMatch should be "full"
+
+- Ex:
+    {
+        path: '', 
+        redirectTo: 'leads-listing', 
+        pathMatch: 'full' 
+    },
+    { 
+        path: 'leads-listing', 
+        component: LeadsListingComponent 
+    }

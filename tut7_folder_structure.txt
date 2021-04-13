@@ -1,0 +1,89 @@
+Folder structure of any Angular App :
+
+1. e2e
+    - end to end test scripts
+    - will end with .e2e-spec.ts extension
+    - Protractor framework
+        - by default
+    src
+        app.e2e-spec.ts
+        login.e2e-spec.ts
+    protractor.conf.js
+        -> configuration settings for running the end to end test scripts
+    tsconfig.json
+        -> basic typescript setting
+
+2. src
+    - entire source code of your application is inside src 
+    - app module
+        app.module.ts
+        - app component
+            - app.component.html -> view/ui/html code
+            - app.component.scss -> stylesheet
+            - app.component.spec.ts -> unit test script
+            - app.component.ts -> class file
+    - assets
+        - images
+        - mock data
+        - apis
+        - 
+    - environments
+        - local
+        - dev
+        - qa
+        - uat
+        - prod
+
+    - favicon.ico 
+
+    - index.html
+        Single Page applicattion    
+            index.html
+                <app-root>
+
+    - main.ts
+        - bootstrapModule
+            - AppModule
+        - This bootstrapModule is the starting point of the application
+        - Not mandatory that it should be AppModule in bootstrapModule
+
+    - polyfills.ts
+        supporting older browsers
+
+    - styles.scss
+        - global/common stylesheet for elements
+            a {
+
+            } 
+
+    - test.ts
+        - test script for the main.ts file
+        - testing the main.ts file code
+
+    - angular.json
+        -> backbone of your application, contains
+            -> scripts
+            -> ports
+            -> settings
+            -> schematics
+                -> angular CLI
+                    -> build
+                    -> test
+
+    - karma.conf.js
+        -> spec.ts
+        -> test script runner
+        -> running or executing all our test scripts
+
+    - tsconfig.json
+        - basically TypeScript configuration file
+        - build output directory
+        - sourmap
+
+    - tslint.json
+        - basically TypeScript configuration file
+        - enforce coding standards
+
+
+
+

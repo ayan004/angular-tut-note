@@ -1,0 +1,16 @@
+What are Structural Directives?
+
+- Structural directives are responsible for HTML layout. They shape or reshape the DOM's structure, typically by adding, removing or manipulating elements.
+
+- As with other directives, you apply a structural directive to a host element. The directive then does whatever it's supposed to do with the host element and its descendents.
+
+- Structural directives are easy to recognize. An asterisk (*) precedes the directive attribute name as in this example.
+E.g. ngIf
+    <div *ngIf="<condition>"> Value 1 </div>
+
+- Types of Structural Directives:
+    - ngIf
+    - ngFor
+    - ngSwitch
+
+    

@@ -1,0 +1,22 @@
+INTRODUCTION TO Base Href
+----------------------------
+
+- Base HREF is mandatory for all Angular apps
+
+- Base HREF is present in your index.html file
+
+- The project is pointing to the "root" directory/folder of your server which is running at 4200 port
+
+- When you are deploying your Angular apps to server, you have to mention the root folder from where the execution will start
+    -> http://myapp.com/app1/  - this can be the root folder
+    -> http://myapp.com  - this can be the root folder
+    -> So base HREF mentions from where to start the execution
+
+- It decides where you want to deploy your app
+    - thats why its extremely important
+
+- Wrong configuration leads to pointing to wrong folder route path
+
+- Setting the base href using the command line --base-href=  [this syntax may vary]
+
+- Syntax: <base href="/">

@@ -1,0 +1,40 @@
+PARAMETRIZED ROUTES - DYNAMIC ROUTES
+--------------------------------------
+
+- We can send dynamic data or parameters to our routes 
+
+- We need to configure the route and mention that the value is dynamic 
+
+- Ex: { path: 'product/:id', component: 'ComponentName' }
+        - For e.g. 
+            - product/10
+            - product/10/220
+
+- We can read the values in the component class and process the parameters
+
+- URLs will look something like this
+    - http://localhost.com/user/10 -> get the user with id as 10
+    - http://localhost.com/search/ka/bangalore -> ka = state & bangalore = city
+    - http://localhost.com/user/10/photos/34 -> user id = 10 and photo id = 34
+
+- While declaring dynamic URLs/Params - make sure you write :(colon) for dynamic data
+    - Ex: 
+    const routes: Routes = [
+        { path: 'product/:id', component: ProductComponent },
+        { path: 'product/:productId/photos/:photoId', component: ProductComponent }
+    ];
+
+- How to access the data that is passed through URL?
+    - Import the ActivatedRoute class in the 'xxx.component.ts' file
+        - import { ActivatedRoute } from '@angular/router';
+    - Create an object of ActivatedRoute in the constructor
+        - export class ProductComponent implements OnInit {
+            constructor(private activatedRoute: ActivatedRoute) { 
+                this.activatedRoute.params.subscribe((params) => {
+                    console.log(params);
+                })
+            }
+            ngOnInit(): void {}
+        }
+
+- We can create any number of dynamic params in our URLs

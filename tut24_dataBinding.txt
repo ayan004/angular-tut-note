@@ -1,0 +1,32 @@
+INTRODUCTION TO DATA BINDING
+
+- Means to bind the data from view(Template) to Controller(Component class) and vice versa
+
+- Data binding as the name suggest - interacting with data
+
+- Defines how the data flows and how the data gets updated based on business logic
+
+- Each component consists of
+    users.component.html -> view/HTML/UI
+    users.component.scss -> stylesheet
+    users.component.ts -> logic and expressions
+    users.component.spec.ts
+
+    Data is spread throughout these files - so data binding helps in interacting with data of the component
+
+- There are two types of data binding 
+    - One-way data binding
+    - Two-way data binding
+
+- One way data binding  
+    - Component to view
+        - interpolation
+        - property binding
+        - style binding
+        - attribute binding
+    - View to component
+        - Event Binding (This Event binding may be under 'view to component', because data is originating from DOM/view and going to the controller)
+
+- Two-way Data Binding
+    - Data flows from view to component and back to component from the view
+

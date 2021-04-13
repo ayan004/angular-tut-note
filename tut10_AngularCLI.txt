@@ -1,0 +1,14 @@
+What are schematics?
+    - You can say schematics are commands that are configured to do certain stuff. 
+    Examples
+        - ng serve
+        - ng build
+        - ng test
+        - ng lint
+        - ng e2e
+
+        - ng new <project_name>
+        - ng generate component <component_name>
+        - ng generate module <module_name>
+        - ng generate pipe <pipe_name>
+        - ng generate directive <directive_name>

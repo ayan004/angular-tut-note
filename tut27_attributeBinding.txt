@@ -1,0 +1,14 @@
+INTRODUCTION TO Attribute Binding
+
+- is a technique that allows the user to bind attributes of elements from component to view(template)
+
+- the data flow is only one-way i.e. from component to view
+
+- can be used for any existing properties or custom attributes
+
+- Syntax: [attr.attribute_name]="'expression'"
+
+- the functionility may seem almost similar to property binding but there is difference 
+    - there is difference in syntax
+    - some attributes are not natively supported for elements, and they don't work with 'Property Binding', but they do work with 'Attribute Binding'
+        - Ex: 'colspan' a attribute of <td> element, don't work with Property Binding, only works with 'Attribute Binding'

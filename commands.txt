@@ -1,0 +1,17 @@
+Q. Command to install angular CLI.
+A. npm install -g @angular/cli
+
+Q. Command to create a new project.
+A. ng new <project_name>
+
+Q. Command to install bootstrap in your project?
+A. npm install --save bootstrap
+
+Q. Command to generate service?
+A. ng g service <service_name>
+
+
+Q. Command: ng g module material --flat
+   what is "flat" & use of it?
+A. "flat" is a switch.
+   It don't create any additional folder for the generated module.

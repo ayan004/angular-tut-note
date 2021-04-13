@@ -1,0 +1,27 @@
+Q. Whats the reason for importing information of 'app-routing.module.ts' in 'app.module.ts' ?
+A. There should be some connection between 'app-routing.module.ts' and 'other-modules'.
+    So, when you import 'app-routing.module' file within 'other-modules', there establishes a connection. 
+
+Q. Why you import 'app-routing.module.ts' in 'app module'...not in any other module?
+A. 'App Module' is the default module from where the execution starts.
+    We don't import 'App Module' in the 'app-routing.module.ts'.
+    Instead, we import 'app-routing.module.ts' in the 'app.module.ts'.
+
+Q. What is bootstrapping?
+A. Initial parsing of the JavaScript is called bootstrapping.
+
+Q. Command to install bootstrap in your project?
+A. npm install --save bootstrap
+
+Q. How to apply the bootstrap style in angular?
+A. "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+   Put the above path in angular.json file inside -> "styles" object
+
+Q. What we need to do after installing and applying bootstrap?
+A. We need to restart the server.
+
+Q. How many types of forms are there in Angular?
+A. Two. They are mentioned below - 
+	1. Template driven forms
+	2. Reactive forms
+

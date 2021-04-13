@@ -1,0 +1,19 @@
+STATIC & DYNAMIC Router Links
+-------------------------------
+
+- When applied to an element in a template, makes that element a link that initiates navigation to a route
+
+- Navigation opens one or more routed components in one or more <router-outlet> locations on the page
+
+- We can have any number of router links in the template
+
+- Router links can be static or can be dynamic in nature
+
+- Static router link  
+    - E.g.
+       <a [routerLink]="'/edit'"> Edit </a>
+
+- Dynamic router link 
+    - E.g.
+       <a [routerLink]="['/user', client.clientId, 'edit']"> Edit </a>
+    - We do not have to put "/" in variables in routerLink 

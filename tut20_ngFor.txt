@@ -1,0 +1,13 @@
+--Introduction to ngFor--
+
+- similar to for statements in other programming languages
+- is a built in structural directive, which modifies the DOM structure
+- loop the elements to display the array data in the template
+- syntax : <div *ngFor="let ele of collection"></div>
+
+- provides LOCAL VARIABLES in the array data
+    - Index- gets the current index of the current element in iteration
+    - First- returns true if the current element is the first element in iteration
+    - Last- returns true if the current element is the last element in iteration
+    - Even- returns true if the current element is the even element in iteration
+    - Odd- returns true if the current element is the odd element in iteration

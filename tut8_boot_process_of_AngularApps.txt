@@ -1,0 +1,35 @@
+--- Boot process of Angular Apps ---
+
+ng serve
+    - compiling the Apps
+    - main.ts
+        - bootstrapModule
+            - AppModule
+                - AppComponent
+            - AuthModule
+                - Login
+                - CheckAuthentication
+                - Forgot
+                - NewUser
+                - LoggedIn
+    - test.ts
+        - test scripts for main.ts
+
+    index.html
+        AppModule
+            AppComponent
+                <app-root>
+
+    Whenever we do a ng serve/built/test
+
+        Process starts by compiling your TypeScript into JavaScript code
+            - Transpiling - you write the code in TypeScript, but it gets transpiled into JavaScript before execution
+            - Below are the transpied JS files
+                runtime.js
+                polyfills.js
+                styles.js
+                scripts.js
+                vendor.js
+                main.js
+
+

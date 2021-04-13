@@ -1,0 +1,12 @@
+-- ngIf
+
+    1. It will always have (*) astrisk symbol
+    2. Built in structural directive
+    3. The ngIf condition will evaluate the expression and give output - true or false
+    4. We can use logical operators inside ngIf - OR(||), And(&&) and NOT(!) 
+    5. We can have multiple use cases
+        - ngIf
+        - ngIf else
+        - ngIf then else
+
+

@@ -1,0 +1,16 @@
+Communication between various Angular Components::
+
+Components are hierarchical 
+They have parent-child relationship 
+
+1. Communication between the related Components
+    - via Parent to Child (@Input)
+    - via Child to Parent
+        - ViewChild
+        - @Output / Event Emitter
+    - Between different Components
+        - via Services
+
+
+Now, what are Services?
+    - It is a common reusable piece of functionality shared between different components

@@ -1,0 +1,21 @@
+BRIEF INTRODUCTION TO ngSwitch
+
+- it's a built in directive and starts with the [] bracket symbol
+- very similar to switch statements in any other programming language
+- allows element to be shown or hidden based on a condition expression 
+- unlike if statement - switch can take multiple value parameters for condition check
+- we can also define a default action for the switch
+- there are mainly 3 important elements of ngSwitch     
+    - ngSwitch - it starts with [] symbol 
+    - ngSwitchCase - it starts with * symbol 
+    - ngSwitchDefault - it starts with * symbol 
+- below is a pseudo-code for ngSwitch
+
+<div [ngSwitch]="switch_expression">
+    <div *ngSwitchCase="match_expression_1">...</div>
+    <div *ngSwitchCase="match_expression_2">...</div>
+    <div *ngSwitchCase="match_expression_3">...</div>
+    <div *ngSwitchCase="match_expression_4">...</div>
+    <div *ngSwitchCase="match_expression_5">...</div>
+    <div *ngSwitchDefault>...</div>
+</div>

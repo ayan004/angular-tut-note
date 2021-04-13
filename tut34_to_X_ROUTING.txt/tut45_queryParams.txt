@@ -1,0 +1,14 @@
+QUERY PARAMS
+---------------
+
+- We can send data from 'Form'
+
+- We can send data from click
+
+- Basically -> URL examples -> 
+        http://localhost.com/search?key=10&state=ka&city=bangalore
+        facebook.com/search?page=10&pagesize=20
+
+- Query Params -> visible in the URL
+
+- Most used for querying, searching or filtering data etc

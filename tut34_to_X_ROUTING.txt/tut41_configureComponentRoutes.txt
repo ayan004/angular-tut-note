@@ -1,0 +1,35 @@
+CONFIGURING COMPONENT ROUTES OPTIONS
+--------------------------------------
+
+- There are various options that we can configure in Component Routes
+
+- We can configure routes to redirect route for various paths
+    - Path            [Practiced it]
+    - Component       [Practiced it]
+    - redirectTo      [Practiced it]
+    Ex:
+const routes: Routes = [
+  { 
+    path: 'add-new-loan',
+    redirectTo: 'add-loan'
+  },
+  {
+    path: 'add-loan',
+    component: AddLoansComponent
+  }
+];
+    - Children        [Practiced it]
+    Ex:
+const routes: Routes = [
+  { 
+    path: 'loan',
+    children: [
+      {
+      path: 'add-loan',
+      component: AddLoansComponent
+    }
+    ]
+  },
+];
+    - Outlet
+    - pathMatch

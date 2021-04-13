@@ -1,0 +1,39 @@
+Templates in Angular Components
+
+1. Whenever we generate a component
+    - 4 files
+        - template file ( .html )
+        - style.css ( stylesheet )
+        - class ( component.ts file )
+        - spec ( unit test file )
+
+2. This is totally baased on the choice at installing Angular Apps
+    - if you selected scss
+    - if you selected css
+        style.css
+
+3. Decorator - It gives definition and meaning of that component    
+    Prefix for decorator - @
+
+4. By default Angular will add "app" as prefix in the selector
+    - selector -> is the unique identifer to identify the component
+    - Name of the selector for the default component <app.component> -> <app-root>
+
+    -> Can you change the default "app" prefix?
+        -> YES - we can change it throughout the app
+        -> what will happen if I change? - you have to update the change everywhere, where you have used it
+        -> will your app work or will it crash? - if you have updated with your latest prefix, then it will work
+
+5. Templates in Components
+
+    - Two ways of using templates in Components
+        - templateUrl
+            - link the html file
+            - is always 1 single html file
+        - template  
+            - will pass the HTML code right there within bapticks( ` ) and not single quotes
+
+6. stylesURL
+    -> is an array
+    -> it can take multiple stylesheets as input
+     

@@ -1,0 +1,25 @@
+BRIEF INTRODUCTION TO ngClass
+
+- the ngClass directive lets us set a class name for the element
+    - we can re-use the code for multiple DOM elements
+
+- we can set more than one class name using ngClass
+
+- we can pass dynamic values via variables
+    - ngClass with string
+    Ex- <div [ngClass]="'one'">declaring ngClass with string</div>
+
+    - ngClass with array
+    Ex- <div [ngClass]="'one two'">declaring ngClass</div> 
+
+    - ngClass with object
+    Ex- <div [ngClass]="{'one':true, 'two':false}">declaring ngClass with multiple class names</div>
+
+    - ngClass with component method
+    Ex- <div [ngClass]="getClsName()">declaring ngClass with method</div>
+
+    - ngClass with variable
+    Ex- <div [ngClass]="styleVar">This is ngClass example with variable</div>
+
+    - ngClass with conditional variable
+    Ex- <div [ngClass]="conditionVar === 'c2' ? 'c2' : 'c1'">This is ngClass with conditional variable</div>

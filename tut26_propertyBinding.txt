@@ -1,0 +1,20 @@
+INTRODUCTION TO Property Binding
+
+- is a technique that allows the user to bind properties of elements from component to view(template)
+
+- the data flow is only one-way i.e. from component to view 
+
+- can be used for all properties like title, placeholder, innerHTML, src, etc
+
+- we can bind multiple properties to an element
+
+- you can almost bind most of the properties of HTML elements
+
+- Syntax: [property]= "'expression'"
+
+- from the tutorial I learned only the below ones
+    - innerHTML
+    - src
+    - alt
+    - title
+    - Go to w3schools.com -> HTML tutorial -> property HTML elements -> you will get the list of all properties

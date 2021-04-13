@@ -1,0 +1,19 @@
+INTRODUCTION TO Event Binding
+
+- is a technique that allows the user to bind events of elements from view/template to component
+
+- the data flow is only one-way i.e. from view to component
+
+- syntax: <button (event_name)="function_name()"> Example </button>
+
+- can be used for all available events
+
+- event is nothing but JavaScript events like
+    - onClick
+    - onMouseOver
+    - onFocus
+    - onBlur
+
+- we can apply events to any element
+
+- when you call any function with the event, you can also pass parameter
